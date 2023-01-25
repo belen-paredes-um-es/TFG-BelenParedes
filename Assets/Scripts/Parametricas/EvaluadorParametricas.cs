@@ -23,7 +23,10 @@ public class EvaluadorParametricas : MonoBehaviour
     string miFuncion;
     [SerializeField]
     bool debug = false;
-
+    [HideInInspector]
+    public float a0 = -3f;
+    [HideInInspector]
+    public float a1 = 3f;
     int n;
     LineRenderer curva;
     
@@ -338,8 +341,7 @@ public class EvaluadorParametricas : MonoBehaviour
         n=100;
         curva.positionCount = n;
 
-        float a0 = -3;
-        float a1=3;
+        
         for(int i = 0; i < n; i++){
             T = a0+(a1-a0)*1f/(n-1)*i;
             x = evaluar(textoX, T.ToString());

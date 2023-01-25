@@ -36,14 +36,17 @@ public class EvaluadorParametricasEditor : Editor
         eval.var1 = EditorGUILayout.IntSlider("a", eval.var1, 1, 10);
         eval.var2 = EditorGUILayout.IntSlider("b", eval.var2, 1, 10);
 
+        eval.a0 = EditorGUILayout.Slider("t0", eval.a0, -10f,10f);
+        eval.a1 = EditorGUILayout.Slider("t1", eval.a1, -10f,10f);
+
         // Modificar el tamaño de la línea
         eval.tam = EditorGUILayout.Slider("Tamaño", eval.tam, .1f, 2f);
         eval.GetComponent<LineRenderer>().startWidth = eval.tam;
         eval.GetComponent<LineRenderer>().endWidth = eval.tam;
 
 
-        eval.numVueltas = EditorGUILayout.IntSlider("Nº vueltas", eval.numVueltas, 1, 12);
-        eval.numPuntos = EditorGUILayout.IntSlider("Nº puntos", eval.numPuntos, 1, 101);
+        // eval.numVueltas = EditorGUILayout.IntSlider("Nº vueltas", eval.numVueltas, 1, 12);
+        // eval.numPuntos = EditorGUILayout.IntSlider("Nº puntos", eval.numPuntos, 1, 101);
 
     }
 }

@@ -9,7 +9,7 @@ public class EvaluadorPolar : MonoBehaviour
     [HideInInspector]
     public float tam = 1f;
     [HideInInspector]
-    public int numVueltas=12;
+    public int numVueltas=3;
     [HideInInspector]
     public int numPuntos=101;
 
